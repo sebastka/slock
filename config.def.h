@@ -11,5 +11,12 @@ static const char *colorname[NUMCOLS] = {
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
 
+/* number of failed password attempts until failcommand is executed.
+   Set to 0 to disable */
+static const int failcount = 0;
+
+/* command to be executed after [failcount] failed password attempts */
+static const char *failcommand = "shutdown";
+
 /* time in seconds before the monitor shuts down */
 static const int monitortime = 5;
